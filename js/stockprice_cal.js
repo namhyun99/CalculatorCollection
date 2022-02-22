@@ -39,7 +39,7 @@ function calResult() {
     ((nowPrice * nowCount) + (addPrice * addCount))
     / (nowCount + addCount)
 
-  result_averagePrice1.innerHTML = averagePrice.toLocaleString();
+  result_averagePrice1.innerHTML = `평단가 : ${averagePrice.toLocaleString()} 원`;
   result_averagePrice2.innerHTML = averagePrice.toLocaleString();
 
   const countSum = nowCount + addCount;
@@ -48,6 +48,7 @@ function calResult() {
   const allSum = nowSum + addSum;
   result_allSum.innerHTML = allSum.toLocaleString();
 
+  goResult(nowPrice, averagePrice);
 
 }
 
@@ -57,18 +58,24 @@ function goResult(nowPrice, averagePrice) {
 
   result.style.display = 'block';
 
-  calResult();
-
   let result_percent = document.querySelector('.result_percent');
   let percent = ((averagePrice - nowPrice) / nowPrice) * 100;
-  console.log(nowPrice);
+
 
   if (nowPrice > averagePrice) {
-    result_percent.innerHTML = `평단가가 ${percent}내려갔습니다.`;
+    result_percent.innerHTML = `평단가가 ${percent.toFixed(1)}% 내려갔습니다.`;
   } else {
-    result_percent.innerHTML = `평단가가 ${percent}올라갔습니다.`;
+    result_percent.innerHTML = `평단가가 ${percent.toFixed(1)}% 올라갔습니다.`;
   }
 
+  let prograss = document.querySelector('.prograss_bar');
+
+  if (percent > 0) {
+    prograss.style.width = percent + '%';
+  }
+  else {
+    prograss.style.width = '0';
+  }
 
 }
 
