@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fbdfc0aa10.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/sellermargin_cal.css">
+
+    <title>셀러마진계산기</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-calculator"></i>
+            <a href="/index.html">계산기모음</a>
+        </div>
+
+        <div class="navbar_menu">
+            <li><a href="/page/stockprice_cal.html">주식평단가계산기</a></li>
+            <li><a href="/page/sellermargin_cal.html">셀러마진계산기</a></li>
+        </div>
+
+        <ul class="navbar_icons">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></i></li>
+        </ul>
+
+        <a href="#" class="navbar_toggleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- main -->
+    <section>
+        <div class="container">
+            
+            <h1> 셀러 마진 계산기 </h1>
+
+            <div class="inputData">
+                <li>매입가 : <input type="number"> 원</li>
+                <li>판매가 : <input type="number"> 원</li>
+                <li>배송비 : <input type="number"> 원</li>
+                <li>기타비용 : <input type="number"> 원</li>
+                <li>마켓수수료(%) : <input type="number"> %</li>
+                <li>마켓수수료(원) :  원</li>
+                <li>정산금액 :  원</li>
+                <li>마진 : 원</li>
+                <li>마진율 :  %</li>
+            </div>
+
+            <button onclick="getValueInput()"> 계산하기 </button>
+            <button onclick="allreset()"> 초기화 </button>
+        </div>
+    </section>
+
+    <script src="/js/toggle.js"></script>
+</body>
+
+</html>

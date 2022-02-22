@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fbdfc0aa10.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/stockprice_cal.css">
+
+
+    <title>주식평단가계산기</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-calculator"></i>
+            <h1>계산기모음</h1>
+        </div>
+
+        <div class="navbar_menu">
+            <li><a href="/page/stockprice_cal.html">주식평단가계산기</a></li>
+            <li><a href="/page/sellermargin_cal.html">셀러마진계산기</a></li>
+        </div>
+
+        <ul class="navbar_icons">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></i></li>
+        </ul>
+
+        <a href="#" class="navbar_toggleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- main -->
+    <section>
+        <div class="container">
+            <div class="title">
+                <h1> 주식 평단가 계산기 </h1>
+            </div>
+            <div class="sub_title">
+                <p>아래 빈칸에 숫자를 입력한 후 계산하기 버튼을 누르면 자동으로 계산됩니다.</p>
+                <p>초기화 버튼을 누르면 입력된 값이 모두 리셋됩니다.</p>
+            </div>
+
+            <div class="inputData_arae">
+                <div class="now_data">
+                    <h3>현재보유</h3>
+                    <li>
+                        <input id="nowPrice" type="number" placeholder="보유단가입력">
+                        <span>원</span>
+                    </li>
+                    <li>
+                        <input id="nowCount" type="number" placeholder="보유수량입력">
+                        <span>주</span>
+                    </li>
+                </div>
+
+                <div class="add_data">
+                    <h3>추가매수</h3>
+                    <li>
+                        <input id="addPrice" type="number" placeholder="추가금액입력">
+                        <span>원</span>
+                    </li>
+
+                    <li>
+                        <input id="addCount" type="number" placeholder="추가수량입력">
+                        <span>주</span>
+                    </li>
+
+                </div>
+            </div>
+
+            <div class="button_area">
+                <button onclick="goResult()"> 계산하기 </button>
+                <button onclick="allreset()"> 초기화 </button>
+            </div>
+
+
+
+            <div class="result">
+                <div class="revenue">
+                    <p>평단가 : <span class="result_averagePrice1"></span> 원
+                    <p>
+                        <span class="result_percent"></span>
+                </div>
+                <div class="stats">
+                    <div class="stats_bar"></div>
+                </div>
+                <div class="result_area">
+                    <div class="now_result">
+                        <h3>현재보유</h3>
+                        <li>보유단가 : <span class="result_nowPrice"></span> 원</li>
+                        <li>보유수량 : <span class="result_nowCount"></span>주</li>
+                        <li>금액합계 : <span class="result_nowSum"></span>원</li>
+                    </div>
+                    <div class="add_result">
+                        <h3>추가매수</h3>
+                        <li>매수단가 : <span class="result_addPrice"></span></li>
+                        <li>매수수량 : <span class="result_addCount"></span></li>
+                        <li>금액합계 : <span class="result_addSum"></span></li>
+                    </div>
+
+                    <div class="new_result">
+                        <h3>결과값</h3>
+                        <li>평단가 : <span class="result_averagePrice2"></span> </li>
+                        <li>합계수량 : <span class="result_CountSum"></span> </li>
+                        <li>총금액 : <span class="result_allSum"></span></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/js/toggle.js"></script>
+    <script src="/js/stockprice_cal.js"></script>
+</body>
+
+</html>
