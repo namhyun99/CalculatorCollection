@@ -15,21 +15,19 @@ h1 {
   font-weight: bold;
 }
 
+li {
+  list-style: none;
+}
+
 h3 {
   padding-left: 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 24px;
   margin-bottom: 10px;
+  color: gray;
 }
 
-li {
-  list-style: none;
-  padding-left: 5px;
-  margin: 5px 5px;
-  font-weight: bold;
-  font-size: 20px;
-}
 span {
   font-size: 15px;
   padding-right: 20px;
@@ -65,11 +63,13 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
+  padding: 20px 12px;
 }
 
 .navbar_logo h1 {
   display: inline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .navbar_logo {
@@ -89,6 +89,9 @@ button:hover {
 
 .navbar_menu li {
   padding: 8px 12px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .navbar_menu li:hover {
@@ -173,7 +176,7 @@ section {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #cbd1d8;
   border-radius: 10px;
   padding: 20px 0 20px 0px;
   margin-bottom: 20px;
@@ -182,26 +185,41 @@ section {
 .result {
   display: none;
   background-color: #fff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #cbd1d8;
   border-radius: 10px;
-  padding: 20px 20px 20px 20px;
-  margin-bottom: 20px;
+  padding: 30px 20px 30px 20px;
+  margin-bottom: 0px;
 }
 
 .result_area {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 50px;
 }
 
-.stats {
+.result_area li {
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 32px;
+  color: gray;
+}
+
+.result_area li span {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: black;
+}
+
+.prograss {
   height: 10px;
-  margin: 20px 10px;
-  background-color: white;
+  margin: 20px 10px 30px;
+  background-color: whitesmoke;
   border-radius: 10px;
 }
 
-.stats_bar {
+.prograss_bar {
   height: 100%;
   background-color: #00cd8c;
   border-radius: 10px;

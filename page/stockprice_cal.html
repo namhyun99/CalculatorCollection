@@ -8,9 +8,9 @@
     <script src="https://kit.fontawesome.com/fbdfc0aa10.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/defult.css">
-    <link rel="stylesheet" href="./css/stockprice_cal.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/defult.css">
+    <link rel="stylesheet" href="/css/stockprice_cal.css">
 
 
     <title>주식평단가계산기</title>
@@ -21,12 +21,12 @@
     <nav class="navbar">
         <div class="navbar_logo">
             <i class="fa-solid fa-calculator"></i>
-            <a href="./index.html"><h1>계산기모음</h1></a>
+            <a href="/index.html"><h1>계산기모음</h1></a>
         </div>
 
         <div class="navbar_menu">
-            <li><a href="./page/stockprice_cal.html">주식평단가계산기</a></li>
-            <li><a href="./page/sellermargin_cal.html">셀러마진계산기</a></li>
+            <li><a href="/page/stockprice_cal.html">주식평단가계산기</a></li>
+            <li><a href="/page/sellermargin_cal.html">셀러마진계산기</a></li>
         </div>
 
         <ul class="navbar_icons">
@@ -79,7 +79,7 @@
             </div>
 
             <div class="button_area">
-                <button onclick="goResult()"> 계산하기 </button>
+                <button onclick="calResult()"> 계산하기 </button>
                 <button onclick="allreset()"> 초기화 </button>
             </div>
 
@@ -87,12 +87,13 @@
 
             <div class="result">
                 <div class="revenue">
-                    <p>평단가 : <span class="result_averagePrice1"></span> 원
-                    <p>
-                        <span class="result_percent"></span>
+                    <p class="result_averagePrice1"></p>
+                    <p class="result_percent"></p>
                 </div>
-                <div class="stats">
-                    <div class="stats_bar"></div>
+                <div class="prograss">
+                    <div class="prograss_bar">
+                    </div>
+            
                 </div>
                 <div class="result_area">
                     <div class="now_result">
@@ -103,16 +104,16 @@
                     </div>
                     <div class="add_result">
                         <h3>추가매수</h3>
-                        <li>매수단가 : <span class="result_addPrice"></span></li>
-                        <li>매수수량 : <span class="result_addCount"></span></li>
-                        <li>금액합계 : <span class="result_addSum"></span></li>
+                        <li>매수단가 : <span class="result_addPrice"></span>원</li>
+                        <li>매수수량 : <span class="result_addCount"></span>주</li>
+                        <li>금액합계 : <span class="result_addSum"></span>원</li>
                     </div>
 
                     <div class="new_result">
                         <h3>결과값</h3>
-                        <li>평단가 : <span class="result_averagePrice2"></span> </li>
-                        <li>합계수량 : <span class="result_CountSum"></span> </li>
-                        <li>총금액 : <span class="result_allSum"></span></li>
+                        <li>평단가 : <span class="result_averagePrice2"></span>원</li>
+                        <li>합계수량 : <span class="result_CountSum"></span>주</li>
+                        <li>총금액 : <span class="result_allSum"></span>원</li>
                     </div>
                 </div>
             </div>
@@ -120,8 +121,8 @@
     </section>
 
 
-    <script src="./js/toggle.js"></script>
-    <script src="./js/stockprice_cal.js"></script>
+    <script src="/js/toggle.js"></script>
+    <script src="/js/stockprice_cal.js"></script>
 </body>
 
 </html>
