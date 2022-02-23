@@ -13,11 +13,29 @@ const result_CountSum = document.querySelector('.result_CountSum');
 const result_allSum = document.querySelector('.result_allSum');
 
 
-function calResult() {
+function calHandler() {
+
+  const nowPrice = Number(document.getElementById("nowPrice").value);
+  const nowCount = Number(document.getElementById("nowCount").value);
+  const addPrice = Number(document.getElementById("addPrice").value);
+  const addCount = Number(document.getElementById("addCount").value);
+
+  if (nowPrice == 0 || nowCount == 0 || addPrice == 0 || addCount == 0) {
+
+    alert("데이터를 입력해주세요");
+
+  } else {
+
+    calResult(nowPrice, nowCount, addPrice, addCount);
+  }
+
+}
+
+
+function calResult(nowPrice, nowCount, addPrice, addCount) {
 
   // 현재보유 계산 
-  let nowPrice = Number(document.getElementById("nowPrice").value);
-  let nowCount = Number(document.getElementById("nowCount").value);
+
   result_nowPrice.innerHTML = nowPrice.toLocaleString();
   result_nowCount.innerHTML = nowCount.toLocaleString();
 
@@ -26,8 +44,7 @@ function calResult() {
 
 
   // 추가매수 계산
-  const addPrice = Number(document.getElementById("addPrice").value);
-  const addCount = Number(document.getElementById("addCount").value);
+
   result_addPrice.innerHTML = addPrice.toLocaleString();
   result_addCount.innerHTML = addCount.toLocaleString();
 

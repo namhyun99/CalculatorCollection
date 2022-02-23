@@ -53,25 +53,49 @@
 
             <div class="data_area">
                 <div class="inputData_1">
-                    <li>판매 가격 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>매입 가격 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>월 판매량 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>택배 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>기타 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>판매 가격 : <input type="number" id="sales_price" placeholder="0"><span> 원</span> </li>
+                    <li>매입 가격 : <input type="number" id="cost_price" placeholder="0"><span> 원</span> </li>
+                    <li>월 판매량 : <input type="number" id="month_sales" placeholder="0"><span> 원</span> </li>
+                    <li>택배 비용 : <input type="number" id="delivery_price" placeholder="0"><span> 원</span> </li>
+                    <li>기타 비용 : <input type="number" id="etc_price" placeholder="0"><span> 원</span> </li>
                 </div>
                 <div class="inputData_2">
-                    <li>광고 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>포장 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>창고 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
-                    <li>마켓수수료(%) : <input type="number" placeholder="0"><span> %</span> </li>
-                    <li>결제수수료(%) : <input type="number" placeholder="0"><span> %</span> </li>
+                    <li>광고 비용 : <input type="number" id="ad_price" placeholder="0"><span> 원</span> </li>
+                    <li>포장 비용 : <input type="number" id="packing_price" placeholder="0"><span> 원</span> </li>
+                    <li>창고 비용 : <input type="number" id="logistics_price" placeholder="0"><span> 원</span> </li>
+                    <li>마켓수수료(%) : <input type="number" id="market_fee" placeholder="3.74"><span> %</span> </li>
+                    <li>결제수수료(%) : <input type="number" id="payment_fee" placeholder="2"><span> %</span> </li>
                 </div>
             </div>
 
 
             <div class="button_area">
-                <button onclick=""> 계산하기 </button>
+                <button onclick="calHandler()"> 계산하기 </button>
                 <button onclick=""> 초기화 </button>
+            </div>
+
+
+            <div class="result" style="display: block;">
+                <div class="result_area">
+                    <div class="result_sales">
+                        <h3>매출</h3>
+                        <li>판매가 : <span class="show_price"></span></li>
+                    </div>
+                    <div class="result_cost">
+                        <h3>원가</h3>
+                        <li>매입 가격 : <span class="show_cost"></span></li>
+                        <li>택배 비용 : <span class="show_delivery"></span></li>
+                        <li>기타 비용 : <span class="show_etc"></span></li>
+                        <li>광고 비용 : <span class="show_add"></span></li>
+                        <li>창고 비용 : <span class="show_logistics"></span></li>
+                        <li>마켓 수수료 : <span class="show_market"></span></li>
+                        <li>결제 수수료 : <span class="show_payment"></span></li>
+                    </div>
+
+                    <div class="result_margin">
+                        <h3>마진</h3>
+                        <li>개당 마진 : <span class="result_margin"></span></li>
+                    </div>
             </div>
         </div>
     </section>
@@ -80,7 +104,8 @@
     <footer>
         <p>Copyrightⓒ2022 by S-bug all rights reseved.</p>
     </footer>
-
+    
+    <script src="../js/sellermargin.js"></script>
     <script src="../js/toggle.js"></script>
 </body>
 

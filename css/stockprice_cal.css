@@ -41,11 +41,6 @@
   margin-left: 30px;
 }
 
-.button_area {
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* result css */
 
 .revenue {
@@ -101,5 +96,6 @@
 
   .now_data {
     border-bottom: 5px dotted #cbd1d8;
+    border-right: none;
   }
 }
