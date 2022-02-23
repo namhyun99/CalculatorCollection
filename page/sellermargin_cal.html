@@ -8,9 +8,9 @@
     <script src="https://kit.fontawesome.com/fbdfc0aa10.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/defult.css">
-    <link rel="stylesheet" href="/css/sellermargin_cal.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/defult.css">
+    <link rel="stylesheet" href="../css/sellermargin_cal.css">
 
     <title>셀러마진계산기</title>
 </head>
@@ -20,7 +20,9 @@
     <nav class="navbar">
         <div class="navbar_logo">
             <i class="fa-solid fa-calculator"></i>
-            <a href="/index.html">계산기모음</a>
+            <a href="../index.html">
+                <h1>계산기모음</h1>
+            </a>
         </div>
 
         <div class="navbar_menu">
@@ -41,27 +43,36 @@
     <!-- main -->
     <section>
         <div class="container">
-            
-            <h1> 셀러 마진 계산기 </h1>
-
-            <div class="inputData">
-                <li>매입가 : <input type="number"> 원</li>
-                <li>판매가 : <input type="number"> 원</li>
-                <li>배송비 : <input type="number"> 원</li>
-                <li>기타비용 : <input type="number"> 원</li>
-                <li>마켓수수료(%) : <input type="number"> %</li>
-                <li>마켓수수료(원) :  원</li>
-                <li>정산금액 :  원</li>
-                <li>마진 : 원</li>
-                <li>마진율 :  %</li>
+            <div class="title">
+                <h1> 셀러 마진 계산기 </h1>
+            </div>
+            <div class="sub_title">
+                <p>아래 빈칸에 숫자를 입력한 후 계산하기 버튼을 누르면 자동으로 계산됩니다.</p>
+                <p>초기화 버튼을 누르면 입력된 값이 모두 리셋됩니다.</p>
             </div>
 
-            <button onclick="getValueInput()"> 계산하기 </button>
-            <button onclick="allreset()"> 초기화 </button>
+            <div class="inputData_arae">
+                    <li>매입가 : <input type="number"> 원</li>
+                    <li>판매가 : <input type="number"> 원</li>
+                    <li>배송비 : <input type="number"> 원</li>
+                    <li>기타비용 : <input type="number"> 원</li>
+                    <li>마켓수수료(%) : <input type="number"> %</li>
+            </div>
+
+            
+            <div class="button_area">
+                <button onclick=""> 계산하기 </button>
+                <button onclick=""> 초기화 </button>
+            </div>
         </div>
     </section>
 
-    <script src="/js/toggle.js"></script>
+
+    <footer>
+        <p>Copyrightⓒ2022 by S-bug all rights reseved.</p>
+    </footer>
+
+    <script src="../js/toggle.js"></script>
 </body>
 
 </html>
