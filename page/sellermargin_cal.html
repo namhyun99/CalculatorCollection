@@ -26,8 +26,8 @@
         </div>
 
         <div class="navbar_menu">
-            <li><a href="/page/stockprice_cal.html">주식평단가계산기</a></li>
-            <li><a href="/page/sellermargin_cal.html">셀러마진계산기</a></li>
+            <li><a href="./page/stockprice_cal.html">주식평단가계산기</a></li>
+            <li><a href="./page/sellermargin_cal.html">셀러마진계산기</a></li>
         </div>
 
         <ul class="navbar_icons">
@@ -51,15 +51,24 @@
                 <p>초기화 버튼을 누르면 입력된 값이 모두 리셋됩니다.</p>
             </div>
 
-            <div class="inputData_arae">
-                    <li>매입가 : <input type="number"> 원</li>
-                    <li>판매가 : <input type="number"> 원</li>
-                    <li>배송비 : <input type="number"> 원</li>
-                    <li>기타비용 : <input type="number"> 원</li>
-                    <li>마켓수수료(%) : <input type="number"> %</li>
+            <div class="data_area">
+                <div class="inputData_1">
+                    <li>판매 가격 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>매입 가격 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>월 판매량 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>택배 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>기타 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
+                </div>
+                <div class="inputData_2">
+                    <li>광고 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>포장 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>창고 비용 : <input type="number" placeholder="0"><span> 원</span> </li>
+                    <li>마켓수수료(%) : <input type="number" placeholder="0"><span> %</span> </li>
+                    <li>결제수수료(%) : <input type="number" placeholder="0"><span> %</span> </li>
+                </div>
             </div>
 
-            
+
             <div class="button_area">
                 <button onclick=""> 계산하기 </button>
                 <button onclick=""> 초기화 </button>
