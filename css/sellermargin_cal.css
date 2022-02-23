@@ -10,3 +10,47 @@
   line-height: 20px;
   padding-bottom: 10px;
 }
+
+.data_area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #cbd1d8;
+  border-radius: 10px;
+  padding: 20px 0 20px 0px;
+  margin-bottom: 20px;
+}
+
+.data_area .inputData_1,
+.data_area .inputData_2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 10px 10px;
+  margin: 5px 5px;
+}
+
+.data_area li {
+  width: 216px;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 32px;
+  color: gray;
+}
+
+.data_area li input {
+  width: 70%;
+  height: 28px;
+  border-radius: 10px;
+  border: 1px solid #cbd1d8;
+}
+
+.data_area li input::placeholder {
+  color: gray;
+}
+
+.data_area li span {
+  float: right;
+}

@@ -33,6 +33,26 @@ span {
   padding-right: 20px;
 }
 
+input::placeholder {
+  color: #ccc;
+}
+input::-webkit-input-placeholder {
+  color: #ccc;
+}
+input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+textarea::placeholder {
+  color: #ccc;
+}
+textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+
 /* button css */
 button {
   padding: 15px;
